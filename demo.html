@@ -9,12 +9,14 @@
   </head>
   <body>
     <h3>json-select Demo</h3>
-    <paper-textarea label="JSON" value="{{json}}"></paper-textarea>
-    <paper-input label="select" value="{{select}}"></paper-input>
-    <json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>
-    <paper-input label='select' value='{{select}}'></paper-input>
-    <template is="dom-repeat" items="{{output}}">
-      {{item}}
+    <template is="dom-bind">
+      <paper-textarea label="JSON" value="{{json}}"></paper-textarea>
+      <paper-input label="select" value="{{select}}"></paper-input>
+      <json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>
+      <paper-input label='select' value='{{select}}'></paper-input>
+      <template is="dom-repeat" items="{{output}}">
+        {{item}}
+      </template>
     </template>
   </body>
 </html>
