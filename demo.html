@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>json-select demo</title>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="json-select.html">
+    <link rel="import" href="../paper-input/paper-input.html">
+    <link rel="import" href="../paper-input/paper-textarea.html">
+  </head>
+  <body>
+    <h3>json-select Demo</h3>
+    <paper-textarea label="JSON" value="{{json}}"></paper-textarea>
+    <paper-input label="select" value="{{select}}"></paper-input>
+    <json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>
+    <paper-input label='select' value='{{select}}'></paper-input>
+    <template is="dom-repeat" items="{{output}}">
+      {{item}}
+    </template>
+  </body>
+</html>
