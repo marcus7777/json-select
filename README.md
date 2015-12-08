@@ -1,2 +1,7 @@
 # json-select
-<json-select> json select wapper
+
+    <json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>
+    
+http://jsonselect.org/
+
+json select wapper
