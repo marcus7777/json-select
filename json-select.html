@@ -1,0 +1,22 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../JSONSelect/src/jsonselect.js"></script>
+
+/*
+ *  `<json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>` json select wapper  
+ *  @demo demo.html
+ */
+<script>
+  window.jsel = JSONSelect;
+  Polymer({
+    is: "json-select",
+    properties:{
+      output: {notify:true, computed: "getOutput(json,select)"}
+    },
+    getOutput: function(json, select) {
+    // If json = string
+      var theDoc = JSON.parse(json);
+    // if json Object theDoc = json
+      return jsel.match(select, theDoc);
+    }
+  });
+</script>
