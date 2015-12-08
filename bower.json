@@ -1,0 +1,13 @@
+{
+  "name": "json-select",
+  "version": "1.0.0",
+  "description": "json-select",
+  "main": "json-select.html",
+  "keywords": [
+    "polymer","web-components"
+  ],
+  "dependencies": {
+    "polymer": "*",
+    "JSONSelect": "lloyd/JSONSelect"
+  }
+}
