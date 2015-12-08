@@ -13,9 +13,12 @@
       output: {notify:true, computed: "getOutput(json,select)"}
     },
     getOutput: function(json, select) {
-    // If json = string
-      var theDoc = JSON.parse(json);
-    // if json Object theDoc = json
+      var theDoc;
+      if (typeof json === 'string') {
+        theDoc = JSON.parse(json)
+      } else {
+        theDoc = json
+      }
       return jsel.match(select, theDoc);
     }
   });
