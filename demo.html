@@ -14,7 +14,7 @@
       <paper-input label="select" value="{{select}}"></paper-input>
       <json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>
       <template is="dom-repeat" items="{{output}}">
-        {{JSON.stringify(item)}}
+        {{item}}
       </template>
       try:
       <pre>
