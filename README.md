@@ -5,3 +5,5 @@
 http://jsonselect.org/
 
 json select wapper
+
+[Demo](http://dev.open-elements.org/bower_components/json-select/demo.html)
