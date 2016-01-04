@@ -15,6 +15,9 @@
     getOutput: function(json, select) {
       var theDoc;
       if (typeof json === 'string') {
+        if (json === '{{json}}') {
+          return null
+        }
         theDoc = JSON.parse(json)
       } else {
         theDoc = json
