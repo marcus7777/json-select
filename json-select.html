@@ -13,17 +13,19 @@
       output: {notify:true, computed: "getOutput(json,select)"}
     },
     getOutput: function(json, select) {
-      if (json && select) {
-        var theDoc;
-        if (typeof json === 'string') {
-          if (json === '{{json}}') {
-            return null
+      if (json) { 
+        if (select) {
+          var theDoc;
+          if (typeof json === 'string') {
+            if (json === '{{json}}') {
+              return null
+            }
+            theDoc = JSON.parse(json)
+          } else {
+            theDoc = json
           }
-          theDoc = JSON.parse(json)
-        } else {
-          theDoc = json
+          return jsel.match(select, theDoc)
         }
-        return jsel.match(select, theDoc)
       }
     }
   });
