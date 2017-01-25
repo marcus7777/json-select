@@ -17,16 +17,14 @@
     getOutput: function(json, select) {
       if (json) { 
         if (select) {
-          var theDoc;
           if (typeof json === 'string') {
             if (json === '{{json}}') {
               return null
             }
-            theDoc = JSON.parse(json)
+            return jsel.match(select, JSON.parse(json))
           } else {
-            theDoc = json
+            return jsel.match(select, json)
           }
-          return jsel.match(select, theDoc)
         }
       }
     }
