@@ -1,7 +1,7 @@
 {
   "name": "json-select",
   "version": "1.0.0",
-  "description": "json-select",
+  "description": "json select wapper",
   "main": "json-select.html",
   "keywords": [
     "polymer","web-components"
