@@ -2,7 +2,7 @@
 <script src="../JSONSelect/src/jsonselect.js"></script>
 <script>
 /*
- *  `<json-select json="{{json}}" select="{{select}}" output="{{output}}" ></json-select>` json select wapper  
+ *  `<json-select json="[[json]]" select="[[select]]" output="{{output}}" ></json-select>` json select wapper  
  *  @demo demo.html
  */
 
@@ -10,6 +10,8 @@
   Polymer({
     is: "json-select",
     properties:{
+      json: Object,
+      select: String,
       output: {notify:true, computed: "getOutput(json,select)"}
     },
     getOutput: function(json, select) {
